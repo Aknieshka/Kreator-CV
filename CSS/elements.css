@@ -1,0 +1,273 @@
+ a {
+    text-decoration: none;
+    color: #afb1b8;
+}
+
+#main a {
+    color: white;
+}
+
+
+#error1 {
+    color: #ff4d4d;
+    font-weight: bold;
+
+}
+
+h1 { 
+    font-family: 'Dancing Script', cursive;
+    text-align: right;
+    font-size: 300%;
+    color: #1d2332;
+    margin: 2%;
+}
+h2 { 
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    font-size: 200%;
+    color: white;
+    margin: 2%;
+}
+
+#cvinfo {
+    margin:0 auto;
+    clear: both;
+    width: 50%;
+}
+
+#cvinfo2 .accordion-text{
+    display: block;
+}
+
+#photo-section {
+    display: block;
+}
+
+#description-section .accordion-text {
+    display:block;
+}
+
+#arrow1 {
+    background-image: url('../photo/lewastrzalka2.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    text-align: left;
+    transition: .6s ease;
+}
+
+#arrow2 {
+    background-image: url('../photo/srodkowastrzalka2.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    text-align: center;
+    transition: .6s ease;
+}
+
+#arrow3 {
+    background-image: url('../photo/prawastrzalka2.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    text-align: right;
+    transition: .6s ease;
+}
+
+.stepinfo
+{
+    width:28.3%;
+    float:left;
+    height:45px; 
+    line-height: 170%;
+    /*font-family: 'Amatic SC', cursive;*/
+    padding: 2.5%;
+}
+
+#arrow1 a {
+    color: #606060;
+}
+
+@media only screen and (max-width: 680px) {
+    #info a {
+        font-size: 50%;
+    }
+
+    .nav2 {
+        margin: 0.25%;
+        width:45%;
+        padding:1%;
+        float:left;
+        font-size: 20%;
+        color: white;
+        transition: .0s ease;
+        
+    }
+}
+
+#info a {
+    font-size: 130%;
+}
+
+
+ul.accordion.js .insidetab {
+    display: none;
+}
+
+ul.accordion.js .insidetab.active {
+    display: block;
+}
+
+li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    line-height: 1.4em;
+    vertical-align: baseline;
+    text-decoration: none;
+    outline: 0;
+}
+
+.nav2 {
+    margin: 0.25%;
+    width:45%;
+    padding:1%;
+    float:left;
+    color: white;
+    font-size: 180%;
+    transition: .5s ease;
+    
+}
+
+.separator  {
+    background-size: contain;
+    margin: 0 auto;
+    clear:both;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    width:95%;
+    transition: .7s ease;
+    float:left;
+    background-color: #3a3c3f;
+    background-repeat: no-repeat;
+    /*background-image: url(up.png);*/
+    text-transform: uppercase;
+    font-weight: bold; 
+}
+
+.separatorOff {
+    font-weight: bold; 
+    background-size: contain;
+    margin: 0 auto;
+    clear:both;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    width:95%;
+    float:left;
+    background-color: #3a3c3f;
+    background-repeat: no-repeat;
+    /*background-image: url(up.png);*/
+    text-transform: uppercase;
+}
+
+
+.accordion-text {
+    margin: 0 auto;
+    clear:both;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    width:95%;
+    float:left;
+    text-align: center;
+}
+
+.accordionOff {
+    margin: 0 auto;
+    clear:both;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    width:95%;
+    float:left;
+    text-align: center;
+}
+
+.accordion-text {
+    display:none;
+}
+
+#template {
+    display: block;
+}
+
+#photo-section .accordion-text{
+    display: block;
+}
+
+
+input[type="text"] {
+    color: black;
+    width: 220px;
+    border: 0%;
+    font-style: bold;
+    font-family: 'Nunito', sans-serif;
+    padding: 0.5%;
+
+}
+
+select {
+    color: black;
+    width: auto;
+    border: 0%;
+    font-style: bold;
+    font-family: 'Nunito', sans-serif;
+    padding: 0.5%;
+
+}
+
+input[type="button"] {
+    color: black;
+    width: auto;
+    border: 0%;
+    font-style: bold;
+    font-family: 'Nunito', sans-serif;
+    padding: 0.2%;
+}
+
+div.important {
+    margin: 0 auto;
+    width: 45%;
+    margin-bottom: 2%;
+    color: #b16868;
+    font-size:85%;
+    font-family: 'Kavivanar', cursive;
+}
+
+#cvinfo  {
+    margin: 0 auto;
+    clear:both;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    width:48%;
+    float:center;
+    text-align: center;
+}
+
+
+#importantcv li{
+    list-style-type: circle;
+    text-align: left;
+}
+
+#importantcv2 li{
+    list-style-type: circle;
+    text-align: left;
+}
+
+#cvinfo2 {
+    margin: 0 auto;
+    clear:both;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    width:60%;
+    float:center;
+    text-align: left;
+}
+

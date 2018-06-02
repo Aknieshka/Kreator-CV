@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+            <link rel="Shortcut icon" href="photo/costam.png" />
+
+            
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />       
+
+            <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" >
+
+            <link rel="Stylesheet" type="text/css" href="CSS/layout.css" />
+            <link rel="Stylesheet" type="text/css" href="CSS/elements.css" />
+            <link rel="Stylesheet" type="text/css" href="CSS/hover.css" />
+
+            <link href="https://fonts.googleapis.com/css?family=Montserrat:300" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Kavivanar" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Nunito:700" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Dancing+Script:700" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Supermercado+One" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Kavivanar" rel="stylesheet">
+            
+            <link href="https://fonts.googleapis.com/css?family=Amatic+SC:700" rel="stylesheet">
+
+            <script src="./plugins/jspdf.js"></script>
+            <script src="./plugins/jspdf.customfonts.min.js"></script>
+            <script src="./plugins/default_vfs.js"></script>
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
+            
+            <script src="./plugins/jquery-3.2.1.js"></script>
+
+            <!--<script type="text/javascript" src="JS/start.js"></script>-->
+
+
+        <title>Kreator CV</title>
+        
+    </head>
+
+   
+<body>
+
+    <div id="nav" >
+        <div id = "navmarg">
+            <a href="info.html" >
+                <div class="nav2">
+                Jak pisać CV?
+                </div>
+            </a>
+
+            <a href="index.html">
+                <div class="nav2" >
+                Kreator CV
+                </div>
+            </a>
+            
+        </div>
+    </div>
+
+    <div id="gallery" class="element" >
+
+        <div id="galleryh1">
+            <h1>Kreator CV</h1>
+        
+        </div>
+        
+    </div>
+
+    <div id="info" class="element" >            
+        <a href = "#insidetab2" class="steptab">
+            <div class="stepinfo" class="active" id="arrow1">
+                 1. Wybierz odpowiedni szablon.
+            </div>
+        </a>
+        <a href = "#insidetab3" onclick="templateAlert()" class="steptab" >
+            <div  class="stepinfo" id="arrow2">
+                2. Uzupełnij informacje.
+            </div>
+        </a>
+        <a href = "#insidetab1" onclick="templateAlert()" class="steptab" >
+            <div  class="stepinfo" id="arrow3">
+                3. Dodaj zdjęcie i generuj CV!
+            </div>
+        </a>
+    </div>
+
+    <div id="main">
+        
+    <ul class="accordion">
+        <div id = "insidetab1" class="insidetab">
+            <li id="photo-section">
+                <div class="separatorOff">Zdjęcie</div>
+                    <div class="accordionOff">
+
+                        <div class="important">Preferowana wielkość obrazka to 150x150 pikseli.</div>
+                        <input id="inputTypeFile" type="file" >
+
+                        <br>
+                        <br>
+
+                        <div id="newImage">
+                            
+                        </div>
+
+                        <br><br>
+
+                        <center><input type="button" id="generator" value="Stwórz swoje CV"/></center>
+                        
+                    </div>
+            </li>
+        </div>
+        <div id = "insidetab2" class="insidetab active">
+            <li id="template-section">
+            
+                <div class="separatorOff">Szablony</div>
+                <div class = "accordionOff" id="template"> 
+                        <a target="_blank" id="template1" ><img src="photo/Przechwytywanie2.jpg" alt="Standard" class="template" border="2" height="340px" hspace="10"/></a>
+                        <a target="_blank"  id="template2" ><img src="photo/Przechwytywanie.jpg" alt="Classic" class="template" border="2" height="340px"  hspace="10" /></a>
+                </div>
+
+                <div class="separatorOff">Kolory</div>
+                <div class = "accordionOff" id="colors"> 
+                        <a target="_blank" id="bluecolor"  ><img src="photo/blue2.png"  class="colordiv" width="70px" alt="Standard"  hspace="4" /></a>
+                        <a target="_blank" id="graycolor" ><img src="photo/gray2.png" class="colordiv" width="70px" alt="Standard"  hspace="4"/></a>
+                        <a target="_blank" id="orangecolor" ><img src="photo/orange2.png" class="colordiv" width="70px" alt="Standard"  hspace="4"/></a>
+                        <a target="_blank" id="greencolor" ><img src="photo/green2.png" class="colordiv" width="69px" alt="Standard"  hspace="4"/></a>
+                </div>
+
+                <script src="JS/templateoption.js"></script> 
+            
+            </li>
+        </div>
+        <div id = "insidetab3" class="insidetab">
+            <li id="description-section">
+                <a href="#" class="separator" ><div>Dane podstawowe</div></a>
+                <div class="accordion-text" > 
+                    <u>Dane osobowe:</u><br><br>
+                    <center>
+                    <table cellpadding="6">
+                    <tbody>
+                        <tr>
+                            <td>Imię*:</td>
+                            <td><input type="text" id="name1" maxlength="15"  placeholder = "Jan"></td>
+                            <td></td>
+                            <td>Krótki opis:</td>
+                            <td><input type="text" id="information" maxlength="35" placeholder = "Webdeveloper"></td>
+                        </tr>
+                        <tr>
+                            <td>Drugie imię:</td>
+                            <td><input type="text" id="name2" maxlength="15"   placeholder = "Marek"></td>
+                            
+                            <td></td>
+                            <td>Data urodzenia*:</td>
+                            <td><input type="text" id="dateOfBirth" maxlength="20" placeholder = "02.09.1990"></td>
+                        </tr>
+                        <tr>
+                            <td>Nazwisko*:</td>
+                            <td><input type="text" id="name3" maxlength="20" placeholder = "Kowalski"></td>
+                            <td></td>
+                            <td>Miejsce zamieszkania*:</td>
+                            <td><input type="text" id="home" maxlength="40" placeholder ="ul. Studzienna 509, Gliwice"></td>
+                        </tr>
+                    </tbody>
+                    </table>
+                    </center>
+
+                    <br><br>
+                    <u>Dane kontaktowe:</u><br><br>
+
+                    <center>
+                    <table cellpadding="6">
+                        <tr>
+                            <td>Numer telefonu*: </td>
+                            <td><input type="text" id="number" maxlength="18"   placeholder = "xxx xxx xxx"></td>
+                        </tr>
+                        <tr>
+                            <td>Email*: </td>
+                            <td><input type="text" id="email" maxlength="40" placeholder = "jankowalski@gmail.com"></td>
+                        </tr>
+                    </table>
+                    </center>
+
+                    <br>
+                    <br>
+                </div>
+            </li>
+            <li>
+                <a href="#" class="separator"><div>Edukacja</div></a>
+                <div class="accordion-text"> 
+
+                    <div class="important">W CV informacje na temat Edukacji podaje się w odwróconym porządku chronologicznym (zaczynamy od najświeższych).</div>
+
+                    <center>
+                    <u>Uczelnia</u>
+                    <br>
+                    <div id="educationElement">
+                    <br>
+                    <input type="checkbox" id="education" name="educationSection"> Zaznacz, jeśli chcesz tą sekcję wyświetlić w CV.
+                    <br><br>
+
+                    <table cellpadding="5">
+                    <tbody>
+                        <tr>
+                            <td>
+                                Kierunek*: 
+                            </td>
+                            <td>
+
+                            </td>
+                            <td>
+                                <input type="text" maxlength="17" name="educationSection" placeholder = "Informatyka">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                Nazwa wydziału: 
+                            </td>
+                            <td>
+                                
+                            </td>
+                            <td>
+                                <input type="text" maxlength="40" name="educationSection" placeholder = "Wydział Matematyki Stosowanej">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                Rodzaj (np. studia inżynierskie dzienne): 
+                            </td>
+                            <td>
+                                
+                            </td>
+                            <td>
+                                <input type="text" name="educationSection" maxlength="22" placeholder = "inżynierskie dzienne">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Okres trwania*: 
+                            </td>
+                            <td>
+                                
+                            </td>
+                            <td>
+                                <input type="text" maxlength="24" name="educationSection" value="" placeholder = "01.10.2017 - 14.10.2017">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Nazwa uczelni*: 
+                            </td>
+                            <td>
+                                
+                            </td>
+                            <td>
+                                <input type="text" maxlength="30" name="educationSection" placeholder = "Politechnika Śląska">
+                            </td>
+
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+                <div id="newEducationElement">
+                        
+                </div>
+                <br>
+                <input type="button" id="educationButton" value="Dodaj uczelnię"/>
+                <br><br>
+                <img src="photo/shortLine.png" width="250px" />
+                <br>
+                <u>Szkoła</u>
+                <br>
+                <div id="educationElement2">
+                        <br>
+                    <input type="checkbox" name="educationSection2"> Zaznacz, jeśli chcesz tą sekcję wyświetlić w CV.
+                    <br><br>
+                    
+                    <table cellpadding="5">
+                    <tbody>
+                        <tr>
+                            <td>
+                                Nazwa szkoły ponadgimnazjalnej*: 
+                            </td>
+                            <td>
+
+                            </td>
+                            <td>
+                                <input type="text" maxlength="42" name="educationSection2"  placeholder = "Liceum Ogólnokształcące nr 5">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                Profil: 
+                            </td>
+                            <td>
+                                
+                            </td>
+                            <td>
+                                <input type="text" maxlength="50" name="educationSection2" value="" placeholder = "matematyczno-informatyczno-fizyczny">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Okres trwania*: 
+                            </td>
+                            <td>
+                                
+                            </td>
+                            <td>
+                                <input type="text" maxlength="24" name="educationSection2" placeholder = "01.09.2015 - 14.10.2015">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Miasto*: 
+                            </td>
+                            <td>
+                                
+                            </td>
+                            <td>
+                                <input type="text" maxlength="30" name="educationSection2"  placeholder = "Gliwice">
+                            </td>
+
+                        </tr>
+                    </tbody>
+                    </table>
+                    </div>
+                    <div id="newEducationElement2">
+                            
+                    </div>
+                    <br>
+                    <input type="button" id="educationButton2" value="Dodaj szkołę"/> 
+                    <br>
+                    
+                    </center>
+                </div>
+            </li>
+            <li>
+                <a href="#" class="separator">Doświadczenie</a>
+                <div class="accordion-text"> 
+                <div class="important">W CV informacje na temat Doświadczenia podaje się w odwróconym porządku chronologicznym (zaczynamy od najświeższych).</div>
+                <center>
+                    <div id="experienceElement">
+                    <input type="checkbox" name="experienceSection"> Zaznacz, jeśli chcesz tą sekcję wyświetlić w CV.
+                    <table cellpadding="5">
+                    <tbody>
+                        <tr>
+                            <td>
+                                Nazwa firmy*: 
+                            </td>
+                            <td>
+
+                            </td>
+                            <td>
+                                <input type="text" maxlength="40" name="experienceSection" placeholder = "Spółka z o.o.">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                Stanowisko*: 
+                            </td>
+                            <td>
+                                
+                            </td>
+                            <td>
+                                <input type="text" maxlength="42" name="experienceSection" placeholder = "Konsultant">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                Okres pracy*: 
+                            </td>
+                            <td>
+                                
+                            </td>
+                            <td>
+                                <input type="text" maxlength="24" name="experienceSection" placeholder = "14.01.2014 - 15.02.2014">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Miejsce pracy*: 
+                            </td>
+                            <td>
+                                
+                            </td>
+                            <td>
+                                <input type="text" maxlength="30" name="experienceSection" placeholder = "Gliwice">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Zakres obowiązków: 
+                            </td>
+                            <td>
+                                
+                            </td>
+                            <td>
+                                <input type="text" maxlength="45" name="experienceSection" placeholder = "zarabianie pieniędzy">
+                            </td>
+
+                        </tr>
+                    </tbody>
+                    </table>
+                    </div>
+
+                    <div id="newExperienceElement">
+
+                    </div>
+                    
+                    <br>
+                    <input type="button" id="experienceButton" value="Dodaj więcej"/>
+                    <br>
+
+                </center>
+
+
+            </div>
+            </li>
+            <li>
+                <a href="#" class="separator"><div>Zainteresowania</div></a>
+                <div class="accordion-text" id="interests"> 
+                    <div id="interestsElement">
+                    <center>
+                    <input type="checkbox" name="interestsName">  <input type="text" maxlength="30" class="interests" name = "interestsName" placeholder = "matematyka">
+                     <br><br>
+                    </center>
+                    </div>
+
+                    <div id="newInterestsElement">
+
+                    </div>
+
+                    <input type="button" id="interestsButton" value="Dodaj więcej"/>
+                </div>
+                
+            </li>
+            <li>
+                <a href="#" class="separator"><div>Cechy</div></a>
+                <div class="accordion-text"> 
+                    <div id="characterElement">
+                    <center>
+                        <input type="checkbox" name = "characterName"><input type="text" maxlength="12" name = "characterName" placeholder = "odpowiedzialny">
+                        <br><br>
+                    </center>
+                    </div>
+
+                    <div id="newCharacterElement">
+
+                    </div>
+
+                    <input type="button" id="characterButton" value="Dodaj więcej"/>
+                </div>
+                
+            </li>
+            <li>
+                <center>
+                    <a href="#" class="separator">Języki</a>
+                    <div class="accordion-text">
+                        <div id="languageElement">
+
+                            <center>
+                            <table cellpadding="5">
+                            <tbody>
+                                <tr>
+                                    <td><input type="checkbox" name="languageName"></td>
+                                    <td><select name="languageName">
+                                            <option value=" "> </option>
+                                            <option value="Angielski">Angielski</option>
+                                            <option value="Niemiecki" >Niemiecki</option>
+                                            <option value="Hiszpański" >Hiszpański</option>
+                                            <option value="Rosyjski" >Rosyjski</option>
+                                    </select>
+                                    </td>
+                                    <td> </td>
+                                    <td>Poziom:</td>
+                                    <td><select name="languageName">
+                                            <option value=" "> </option>
+                                            <option value="A1" >A1</option>
+                                            <option value="A2" >A2</option>
+                                            <option value="B1" >B1</option>
+                                            <option value="B2" >B2</option>
+                                            <option value="C1" >C1</option>
+                                            <option value="C2" >C2</option>
+                                    </select>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            </table>
+                            </center>
+                        </div>
+
+                        <div id="newLanguageElement">
+                                
+                        </div>
+
+                        <input type="button" id="languageButton" value="Dodaj więcej"/>
+
+                        <br><br>
+
+                        <div id="languageElement2">
+
+                                <center>
+                                <table cellpadding="5">
+                                <tbody>
+                                <tr>
+                                    <td><input type="checkbox" name="languageName"></td>
+                                    <td>Inny język:</td>
+                                    <td><input type="text" name = "languageName" placeholder = " Francuski"></td>
+                                    <td> </td>
+                                    <td>Poziom:</td>
+                                    <td><select name="languageName">
+                                            <option value=" " > </option>
+                                            <option value="A1" >A1</option>
+                                            <option value="A2" >A2</option>
+                                            <option value="B1" >B1</option>
+                                            <option value="B2" >B2</option>
+                                            <option value="C1" >C1</option>
+                                            <option value="C2" >C2</option>
+                                    </select>
+                                    </td>
+                                </tr>
+                                </tbody>
+                                </table>
+                                </center>
+                             
+                              
+                        </div>
+
+                        <div id="newLanguageElement2">
+                                
+                        </div>
+
+                        <input type="button" id="languageButton2" value="Dodaj więcej"/>
+                        
+
+                    </div> 
+                </center>
+            </li>
+            <li>
+                <a href="#" class="separator">UMIEJĘTNOŚCI</a>
+                <div class="accordion-text">
+                        
+
+                        <div id="knowhowElement">
+                            <u>Proponowane:</u> 
+
+                            <center>
+                            <table cellpadding="5">
+                                 <tbody>
+                                    <tr>
+                                        <td><input type="checkbox" name = "knowhowName" ></td>
+                                        <td ><div name = "knowhowName">Znajomość pakietów biurowych:</div></td>
+                                        <td><input type="text" maxlength="30" value="Libre, MS Office" name = "knowhowName" placeholder = " "></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" name = "knowhowName"></td>
+                                        <td ><div name = "knowhowName">Poznane języki programowania:</div></td>
+                                        <td><input type="text" maxlength="30" value="C, C#, C++, Java" name = "knowhowName" placeholder = " "></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox"  name = "knowhowName"></td>
+                                        <td><div name = "knowhowName">Znajomość:</div></td>
+                                        <td><input type="text" maxlength="30" value="MySQL (poziom średni)" name = "knowhowName" placeholder = " "></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" name = "knowhowName"></td>
+                                        <td><div name = "knowhowName">Bardzo dobra znajomość:</div></td>
+                                        <td><input type="text" maxlength="30" value="Platformy .NET" name = "knowhowName" placeholder = " "></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" name = "knowhowName"></td>
+                                        <td><div name = "knowhowName">Poznane oprogramowanie:</div></td>
+                                        <td><input type="text" maxlength="30" value="Mathematica, Statistica, R" name = "knowhowName" placeholder = " "></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" name = "knowhowName"></td>
+                                        <td><div name = "knowhowName">Umiejętność analitycznego myślenia.</div></td>
+                                        <td> </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" name = "knowhowName"></td>
+                                        <td><div name = "knowhowName">Zdolność szybkiego przyswajania wiedzy.</div></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" name = "knowhowName"></td>
+                                        <td><div name = "knowhowName">Prawo jazdy kategorii B.</div></td>
+                                        <td></td>
+                                    </tr>
+                                    
+                                 </tbody>
+                            </table>
+                            </center>
+
+                            </div>
+                            
+                            <br>
+                            <br>
+
+                            <u>Inne:</u>
+                            <br>
+                            <br>
+
+                            <div id="knowhowElement2" >
+                                    
+                                <center>
+                                    <table cellpadding="2">
+                                    <tbody>
+                                    <tr>
+                                        <td><input type="checkbox" name = "knowhowName2"></td>
+                                        <td><input type="text" value="Wchodzenie po schodach" maxlength="25" name="knowhowName2" placeholder = " "></td>
+                                        <td> </td>
+                                        <td>Poziom:</td>
+                                        <td>
+                                        <select name="knowhowName2">
+                                            <option value=" " > </option>
+                                            <option value="Podstawowy" >Podstawowy</option>
+                                            <option value="Średni" >Średni</option>
+                                            <option value="Zaawansowany" >Zaawansowany</option>
+                                        </select>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                    </table>
+                                </center>
+                                    
+                            
+                                <br>
+                                
+                                </div>
+
+                                <div id="newKnowhowElement2">
+                                        
+                                </div>
+    
+                            <input type="button" id="knowhowButton" value="Dodaj więcej"/>
+                            <script src="JS/addElement.js"></script> 
+    
+    
+                            
+                        </div>
+                </div>
+            </li>
+        </div>
+        </ul>
+
+        <script src="JS/accordion.js"></script>
+        
+    </div>
+
+    <div id="footer">
+        
+        <script src="JS/cvfunction1.js"></script>
+        <script src="JS/cvfunction2.js"></script>
+
+        App icons designed by <a href="https://icons8.com/">icons8</a>.
+
+        <script src="JS/steps.js"></script>
+
+        <script src="JS/checkText.js"></script>
+        <script src="JS/generator.js"></script>
+        <script src="JS/cvcolors.js"></script>
+
+        
+    </div>
+
+</body>
+
+</html>

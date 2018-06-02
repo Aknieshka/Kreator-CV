@@ -1,0 +1,66 @@
+.nav2:hover {
+    color: #5C4F42;
+    font-size: 250%;
+}
+  
+
+.template:hover {
+  color: black;
+}
+
+.colordiv {
+  transition: .9s ease;
+  filter:brightness(135%);
+}
+
+.colordiv:hover {
+  filter: contrast(180%);
+  transform: rotate(100deg);
+}
+
+#nav:hover {
+  filter: contrast(110%);
+}
+
+.separator:hover {
+  filter:brightness(120%);
+}
+
+#arrow1:hover {
+  filter: contrast(130%);
+}
+
+#arrow1 {
+  filter: contrast(130%);
+}
+
+#arrow2:hover {
+  filter: contrast(130%);
+}
+#arrow3:hover {
+  filter: contrast(130%);
+}
+
+#galleryh1 {
+  margin: 0 auto;
+  width:100%;
+  height:150px; 
+  opacity: 0.4;
+  transition: .9s ease;
+  text-align: right;
+}
+
+
+#gallery:hover {
+  opacity: 0.8;
+  filter: contrast(120%);
+  box-shadow: 0 0 5px rgb(90, 73, 73);
+}
+
+#galleryh1:hover {
+  opacity: 0.8;
+  font-size: 110%;
+  /*background-image: url(../photo/niewiem2.png);*/
+  background-size: 100%;
+}
+
